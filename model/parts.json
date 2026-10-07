@@ -1,0 +1,17 @@
+{
+  "_doc": "Asset contract for the SONORA concert hall kit. Blender is Z-up, the GLB is Y-up (glTF x = Blender x, y = Blender z, z = -Blender y). The stage is at glTF z = -18, the audience looks toward -z, the rear wall is at z = +18. Every browser-controlled part has a stable name and a pivot at its hinge or hang point. Proxy_Hall is the low-poly analysis volume and is never drawn.",
+  "hall": {"width": 24, "length": 36, "height": 13},
+  "stage": {"x": [-10, 10], "z": [-18, -8], "top": 1.2},
+  "balcony": {"z": [-6, 18], "deckY": 4.8, "seatRows": 10},
+  "groups": {
+    "shell": ["Hall_Floor", "Hall_Ceiling", "Wall_Left", "Wall_Right", "Wall_Rear", "Wall_Stage"],
+    "stage": ["Stage_Platform", "Conductor_Podium", "Conductor_Body", "Conductor_Arm", "Truss_Stage"],
+    "seating": ["Seats_Center", "Seats_Left", "Seats_Right", "Seats_Balcony", "Balcony_Deck", "Balcony_Front", "Balcony_Columns"],
+    "panels": {"prefix": "Panel_L_", "count": 8, "also": [{"prefix": "Panel_R_", "count": 8}, {"prefix": "Panel_Rear_", "count": 4}]},
+    "reflectors": {"prefix": "Reflector_", "count": 6},
+    "speakers": [{"unit": "SpeakerArray_L", "elements": 6}, {"unit": "SpeakerArray_R", "elements": 6}, {"unit": "Speaker_Fill_L", "elements": 1}, {"unit": "Speaker_Fill_R", "elements": 1}],
+    "lights": {"prefix": "Light_", "count": 6},
+    "proxy": ["Proxy_Hall"]
+  },
+  "budget": {"tris": 60000, "bytes": 900000}
+}
